@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8"></meta>
-<title>Open Sans 크기와 무게</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script>
-function isElementUnderBottom(elem, triggerDiff) {
-const { top } = elem.getBoundingClientRect();
-const { innerHeight } = window;
-return top > innerHeight + (triggerDiff || 0);
-}
+  <meta charset="utf-8">
+  </meta>
+  <title>Open Sans 크기와 무게</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+    function isElementUnderBottom(elem, triggerDiff) {
+      const {
+        top
+      } = elem.getBoundingClientRect();
+      const {
+        innerHeight
+      } = window;
+      return top > innerHeight + (triggerDiff || 0);
+    }
 
-function handleScroll() {
-const elems = document.querySelectorAll('#ani');
-elems.forEach(elem => {
-if (isElementUnderBottom(elem, -20)) {
-  elem.style.opacity = "0";
-  elem.style.transform = 'translateY(70px)';
-} else {
-  elem.style.opacity = "1";
-  elem.style.transform = 'translateY(0px)';
-}
-})
-}
-window.addEventListener('scroll', handleScroll);
-</script>
-<script>
-window.addEventListener('scroll', handleScroll);
+    function handleScroll() {
+      const elems = document.querySelectorAll('#ani');
+      elems.forEach(elem => {
+        if (isElementUnderBottom(elem, -20)) {
+          elem.style.opacity = "0";
+          elem.style.transform = 'translateY(70px)';
+        } else {
+          elem.style.opacity = "1";
+          elem.style.transform = 'translateY(0px)';
+        }
+      })
+    }
+    window.addEventListener('scroll', handleScroll);
+  </script>
+  <script>
+    window.addEventListener('scroll', handleScroll);
 
-	$(document).ready(function(){
+    $(document).ready(function() {
 
-		$('#lastli').click(function(){
+      $('#lastli').click(function() {
 
-			var offset = $('#webcover').offset(); //선택한 태그의 위치를 반환
+        var offset = $('#webcover').offset(); //선택한 태그의 위치를 반환
 
-                //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함
+        //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함
 
-	        $('html').animate({scrollTop : offset.top}, 0);
+        $('html').animate({
+          scrollTop: offset.top
+        }, 0);
 
-		});
+      });
 
-	});
-</script>
+    });
+  </script>
+
 <body>
   <ul class="navbar">
     <li id="indexli"><a href="index.html"><b>INDEX</b></a></li>
@@ -55,16 +64,18 @@ window.addEventListener('scroll', handleScroll);
     <li><a href="shapecolor.html">형태와 컬러</a></li>
     <li><a href="realimage.html">실사 이미지</a></li>
     <li id="lastli"><b>TOP</b></li>
+    <li id="lastli"><b>TOP</b></li>
   </ul>
   <div id="webcover">
     <img src="img/e_webcover_3.png">
   </div>
   <div id="design">
-     <img id="ani" class="first_output" src="img/e_sw_1.png">
-     <img id="ani" class="output" src="img/e_sw_2.png">
-     <img id="ani" class="output" src="img/e_sw_3.png">
-     <img id="ani" class="output" src="img/e_sw_4.png">
-     <img id="ani" class="last_output" src="img/e_sw_5.png">
+    <img id="ani" class="first_output" src="img/e_sw_1.png">
+    <img id="ani" class="output" src="img/e_sw_2.png">
+    <img id="ani" class="output" src="img/e_sw_3.png">
+    <img id="ani" class="output" src="img/e_sw_4.png">
+    <img id="ani" class="last_output" src="img/e_sw_5.png">
   </div>
 </body>
+
 </html>
