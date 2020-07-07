@@ -1,0 +1,80 @@
+*{
+  padding:0;
+  margin:0;
+  scroll-behavior:smooth;
+}
+li{
+  list-style:none;
+}
+
+body { margin: 0;
+  font-family:"Gothic A1";
+}
+.navbar {
+  background-color: white;
+  margin: 0; padding: 0;
+  list-style: none;
+  position: fixed;
+  width: 100%;
+  letter-spacing: -0.7px;
+  text-align:right;
+  color:black;
+  z-index: 1;
+}
+.navbar>li {
+  display: inline-block;
+  margin-top:auto;
+  margin-bottom:auto;
+}
+#indexli{
+  float:left;
+  margin-left: 80px;
+}
+#lastli{
+  margin-right:80px;
+}
+.navbar>li>a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: black;
+}
+.navbar>li>a:hover {
+  font-weight:bold;
+}
+.navbar>li>a:visited {
+  text-decoration:none;
+  color: black;
+}
+#design {
+  z-index: 0;
+}
+#postergif {
+  text-align:center;
+  margin-bottom:100px;
+}
+.clear {
+  clear: both;
+}
+.output {
+ margin-bottom: 300px;
+ margin-left: 100px;
+}
+.first_output {
+  margin-top:200px;
+  margin-bottom: 300px;
+  margin-left: 100px;
+}
+.last_output {
+  margin-left: 100px;
+  margin-bottom: 100px;
+}
+.last_output_poster {
+  margin-left: 100px;
+}
+img {
+  inline:block;
+}
+#ani {
+   transition: transform 0.7s, opacity 1s;
+}

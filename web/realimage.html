@@ -1,0 +1,80 @@
+<!DOCTYPE html><!-- 21961005 강수민 -->
+<html lang="en">
+<head>
+<title>실사 이미지의 위력</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+function isElementUnderBottom(elem, triggerDiff) {
+const { top } = elem.getBoundingClientRect();
+const { innerHeight } = window;
+return top > innerHeight + (triggerDiff || 0);
+}
+
+function handleScroll() {
+const elems = document.querySelectorAll('#ani');
+elems.forEach(elem => {
+if (isElementUnderBottom(elem, -20)) {
+  elem.style.opacity = "0";
+  elem.style.transform = 'translateY(70px)';
+} else {
+  elem.style.opacity = "1";
+  elem.style.transform = 'translateY(0px)';
+}
+})
+}
+window.addEventListener('scroll', handleScroll);
+</script>
+<script>
+window.addEventListener('scroll', handleScroll);
+
+	$(document).ready(function(){
+
+		$('#lastli').click(function(){
+
+			var offset = $('#webcover').offset(); //선택한 태그의 위치를 반환
+
+                //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함
+
+	        $('html').animate({scrollTop : offset.top}, 0);
+
+		});
+
+	});
+</script>
+<body>
+  <ul class="navbar">
+    <li id="indexli"><a href="index.html"><b>INDEX</b></a></li>
+    <li><a href="korean1.html">K 서체꼴 이야기</a></li>
+    <li><a href="korean2.html">K 사이사이</a></li>
+    <li><a href="korean3.html">K 크기와 무게</a></li>
+    <li><a href="english1.html">E 서체꼴 이야기</a></li>
+    <li><a href="english2.html">E 사이사이</a></li>
+    <li><a href="english3.html">E 크기와 무게</a></li>
+    <li><a href="shapecolor.html">형태와 컬러</a></li>
+    <li><a href="realimage.html">실사 이미지</a></li>
+    <li id="lastli"><b>TOP</b></li>
+  </ul>
+
+  <div id="design">
+    <div id="webcover">
+      <img src="img/real_webcover.gif" width=100%>
+    </div>
+    <div id="png">
+      <img id="ani" class="first_output" src="img/r_1.png">
+      <img id="ani" class="output" src="img/r_2.png">
+      <img id="ani" class="output" src="img/r_3.png">
+      <img id="ani" class="output" src="img/r_4.png">
+      <img id="ani" class="output" src="img/r_5.png">
+      <img id="ani" class="output" src="img/r_6.png">
+    </div>
+    <div class="clear"></div>
+    <div id="postergif">
+      <img id="moving" src="img/실사1.gif" height=814px>
+      <img id="moving" src="img/실사2.gif" height=814px>
+      <img id="moving" src="img/실사3.gif" height=814px>
+    </div>
+  </div>
+</body>
+</html>
