@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"></meta>
-<title>INDEX</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script>
-</script>
+  <meta charset="utf-8">
+  </meta>
+  <title>INDEX</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+  </script>
+
 <body>
   <ul class="navbar">
     <li id="indexli"><a href="index.html"><b>INDEX</b></a></li>
@@ -17,31 +19,12 @@
     <li><a href="english2.html">E 사이사이</a></li>
     <li><a href="english3.html">E 크기와 무게</a></li>
     <li><a href="shapecolor.html">형태와 컬러</a></li>
-    <li id="lastli"><a href="realimage.html">실사 이미지</a></li>
+    <li><a href="realimage.html">실사 이미지</a></li>
+    <li id="lastli"><b>TOP</b></li>
   </ul>
-  <div id="java">
-    <script src="http://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
-     <script>
-       var c1 = new mojs.Shape({
-         shape:'circle',
-         radius:{0:'rand(50,100)'},
-         left:0,
-         top:0,
-         x:0,
-         y:0,
-         fill:'white',
-         stroke:'none',
-         strokeWidth:'rand(0,0)',
-         duration:'rand(200,600)',
-         delay:0
-       });
-       document.addEventListener('click', function(e){
-         c1.generate().tune({x:e.pageX, y:e.pageY}).replay();
-       });
-     </script>
- </div>
-<div id="design">
-   <img src="img/main_webcover.gif">
-</div>
+  <div id="design">
+    <img src="img/main_webcover.gif">
+  </div>
 </body>
+
 </html>
